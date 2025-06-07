@@ -1,3 +1,44 @@
+//B Task
+// 1ta string parametrga ega bolsin,
+//stringda qatnashgan raqamlarni sonini bizga return qilsin.
+//function tuzish
+function countDigits(word) {
+  let count = 0;
+  for (let char of word) {
+    if (char >= 0 && char <= 9 ) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("Natija 1:", countDigits("ad2a54y79wet0sfgb9")); // Natija 1: 7
+
+
+
+
+
+//Task A
+// Harf sifatida kiritilgan birinchi parametr,
+// kiritilgan ikkinchi parametr tarkibida nechta ekanligini gaytaruvchi
+// Funktsiya tuzing
+
+// function countLetter(letter, word) {
+//   let count = 0;
+//   for (let char of word) {
+//     if (char === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log("Natija 1:", countLetter("e", "engineer"));
+// console.log("Natija 2:", countLetter("g", "engineer"));
+// console.log("Natija 3:", countLetter("x", "example")); 
+// console.log("Natija 4:", countLetter("z", "example")); 
+
+
 
 /*
 console. log ("Jack Ma maslahatlari");
@@ -106,7 +147,7 @@ console.log(" herepassed 1");
     */
   /*
     console.log("EXECUTE");
-//  ⭐️ Asynchronous: CALLBACK, ASYNC && PROMISE
+//   Asynchronous: CALLBACK, ASYNC && PROMISE
 
 // DEFINE
 function qoldiqliBolish(a, b, callback) {
@@ -127,17 +168,3 @@ qoldiqliBolish(10, 7, (err, data) => {
 });
 */
 
-function countLetter(letter, word) {
-  let count = 0;
-  for (let char of word) {
-    if (char === letter) {
-      count++;
-    }
-  }
-  return count;
-}
-
-console.log("Natija 1:", countLetter("e", "engineer"));
-console.log("Natija 2:", countLetter("g", "engineer");
-console.log("Natija 3:", countLetter("x", "example")); 
-console.log("Natija 4:", countLetter("z", "example")); 
