@@ -57,7 +57,7 @@ console.log(" herepassed 1");
    //console("==================================");
 
    
- 
+ /*
    console. log ("Jack Ma maslahatlari");
    const list = [
      "yahshi talaba boling", // 0-20
@@ -81,7 +81,7 @@ console.log(" herepassed 1");
          return list[5];
         */
 
-         
+       /*  
        //Promise function
          return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -103,4 +103,41 @@ console.log(" herepassed 1");
     }
     run();
   
-    
+    */
+  /*
+    console.log("EXECUTE");
+//  ⭐️ Asynchronous: CALLBACK, ASYNC && PROMISE
+
+// DEFINE
+function qoldiqliBolish(a, b, callback) {
+  if (b === 0) {
+    callback("Mahraj nolga teng bololmaydi", null);
+  } else {
+    callback(null, a % b);
+  }
+}
+
+// CALL
+qoldiqliBolish(10, 7, (err, data) => {
+  if (err) {
+    console.log("Error:", err);
+  } else {
+    console.log("Data:", data);
+  }
+});
+*/
+
+function countLetter(letter, word) {
+  let count = 0;
+  for (let char of word) {
+    if (char === letter) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log("Natija 1:", countLetter("e", "engineer"));
+console.log("Natija 2:", countLetter("g", "engineer");
+console.log("Natija 3:", countLetter("x", "example")); 
+console.log("Natija 4:", countLetter("z", "example")); 
