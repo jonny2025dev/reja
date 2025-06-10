@@ -33,13 +33,15 @@ app.post("/create-item", (req, res) => {
   //TODO: code with db here
   const new_reja = req.body.reja
   db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-    if (err) {
-      console.log(err);
-      res.end("somethin webt wrong");
-    } else {
-      res.end("successfully added");
-    }
-  })
+    console.log(data.ops);
+    res.json(data.ops[0]);
+    // if (err) {
+    //   console.log(err);
+    //   res.end("somethin webt wrong");
+    // } else {
+    //   res.end("successfully added");
+    // }
+  });
 });
 
 app.get("/", function (req, res) {
