@@ -1,18 +1,70 @@
+//C task
+//Shop
+// constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul
+//Har bir method ishga tushgan vaqt ham log qilinsin.
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  _time() {
+    const d = new Date();
+    return `${d.getHours()}:${d.getMinutes()}`;
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${this._time()}da ${this.non} non, ${this.lagmon} lagmon, ${this.cola} cola bor.`);
+  }
+
+  sotish(n, s) {
+    if (!this[n] && this[n] !== 0) {
+      console.log(`Mahsulot ${n} yoq.`);
+    } else if (this[n] < s) {
+      console.log(`Hozir ${this._time()}da yetarli emas: ${n}.`);
+    } else {
+      this[n] -= s;
+      console.log(`Hozir ${this._time()}da ${s} ${n} sotildi.`);
+    }
+  }
+
+  qabul(n, s) {
+    if (!this[n] && this[n] !== 0) {
+      console.log(`Mahsulot ${n} yoq.`);
+    } else {
+      this[n] += s;
+      console.log(`Hozir ${this._time()}da ${s} ${n} qabul qilindi.`);
+    }
+  }
+}
+
+const shop = new Shop(4,5,2);
+shop.qoldiq();                
+shop.sotish('non', 3);        
+shop.qabul('cola', 4);        
+shop.qoldiq();               
+
+
+
+
+
+
 //B Task
 // 1ta string parametrga ega bolsin,
 //stringda qatnashgan raqamlarni sonini bizga return qilsin.
 //function tuzish
-function countDigits(word) {
-  let count = 0;
-  for (let char of word) {
-    if (char >= 0 && char <= 9 ) {
-      count++;
-    }
-  }
-  return count;
-}
+// function countDigits(word) {
+//   let count = 0;
+//   for (let char of word) {
+//     if (char >= 0 && char <= 9 ) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
 
-console.log("Natija 1:", countDigits("ad2a54y79wet0sfgb9")); // Natija 1: 7
+// console.log("Natija 1:", countDigits("ad2a54y79wet0sfgb9")); // Natija 1: 7
 
 
 
