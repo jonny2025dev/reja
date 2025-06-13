@@ -1,49 +1,83 @@
+//D-TASK
+//2ta string parametr ega bolsin
+//  agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+
+
+function checkContent(name1, name2) {
+  if (name1.length !== name2.length) return false;
+
+  const countChars = (name) => {
+    const count = {};
+    for (let char of name) {
+      count[char] = (count[char] || 0) + 1;
+    }
+    return count;
+  };
+
+  const count1 = countChars(name1);
+  const count2 = countChars(name2);
+
+  for (let char in count1) {
+    if (count1[char] !== count2[char]) return false;
+  }
+  return true;
+}
+
+console.log(checkContent("daegu", "soul")); 
+console.log(checkContent("assalomualykum", "vo alykum assalom"));       
+console.log(checkContent("123344", "123344"));          
+
+
+
+
+
+
 //C task
 //Shop
 // constructoriga 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul
 //Har bir method ishga tushgan vaqt ham log qilinsin.
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
 
-  _time() {
-    const d = new Date();
-    return `${d.getHours()}:${d.getMinutes()}`;
-  }
+//   _time() {
+//     const d = new Date();
+//     return `${d.getHours()}:${d.getMinutes()}`;
+//   }
 
-  qoldiq() {
-    console.log(`Hozir ${this._time()}da ${this.non} non, ${this.lagmon} lagmon, ${this.cola} cola bor.`);
-  }
+//   qoldiq() {
+//     console.log(`Hozir ${this._time()}da ${this.non} non, ${this.lagmon} lagmon, ${this.cola} cola bor.`);
+//   }
 
-  sotish(n, s) {
-    if (!this[n] && this[n] !== 0) {
-      console.log(`Mahsulot ${n} yoq.`);
-    } else if (this[n] < s) {
-      console.log(`Hozir ${this._time()}da yetarli emas: ${n}.`);
-    } else {
-      this[n] -= s;
-      console.log(`Hozir ${this._time()}da ${s} ${n} sotildi.`);
-    }
-  }
+//   sotish(n, s) {
+//     if (!this[n] && this[n] !== 0) {
+//       console.log(`Mahsulot ${n} yoq.`);
+//     } else if (this[n] < s) {
+//       console.log(`Hozir ${this._time()}da yetarli emas: ${n}.`);
+//     } else {
+//       this[n] -= s;
+//       console.log(`Hozir ${this._time()}da ${s} ${n} sotildi.`);
+//     }
+//   }
 
-  qabul(n, s) {
-    if (!this[n] && this[n] !== 0) {
-      console.log(`Mahsulot ${n} yoq.`);
-    } else {
-      this[n] += s;
-      console.log(`Hozir ${this._time()}da ${s} ${n} qabul qilindi.`);
-    }
-  }
-}
+//   qabul(n, s) {
+//     if (!this[n] && this[n] !== 0) {
+//       console.log(`Mahsulot ${n} yoq.`);
+//     } else {
+//       this[n] += s;
+//       console.log(`Hozir ${this._time()}da ${s} ${n} qabul qilindi.`);
+//     }
+//   }
+// }
 
-const shop = new Shop(4,5,2);
-shop.qoldiq();                
-shop.sotish('non', 3);        
-shop.qabul('cola', 4);        
-shop.qoldiq();               
+// const shop = new Shop(4,5,2);
+// shop.qoldiq();                
+// shop.sotish('non', 3);        
+// shop.qabul('cola', 4);        
+// shop.qoldiq();               
 
 
 
