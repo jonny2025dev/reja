@@ -1,31 +1,46 @@
+//E-TASK: 
+//hunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin
+//MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(str) {
+  return str.split('').reverse().join('');
+}
+const result = getReverse("Hello MIT30");
+console.log(result);
+
+
+
+
+
+
 //D-TASK
 //2ta string parametr ega bolsin
 //  agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 
 
-function checkContent(name1, name2) {
-  if (name1.length !== name2.length) return false;
+// function checkContent(name1, name2) {
+//   if (name1.length !== name2.length) return false;
 
-  const countChars = (name) => {
-    const count = {};
-    for (let char of name) {
-      count[char] = (count[char] || 0) + 1;
-    }
-    return count;
-  };
+//   const countChars = (name) => {
+//     const count = {};
+//     for (let char of name) {
+//       count[char] = (count[char] || 0) + 1;
+//     }
+//     return count;
+//   };
 
-  const count1 = countChars(name1);
-  const count2 = countChars(name2);
+//   const count1 = countChars(name1);
+//   const count2 = countChars(name2);
 
-  for (let char in count1) {
-    if (count1[char] !== count2[char]) return false;
-  }
-  return true;
-}
+//   for (let char in count1) {
+//     if (count1[char] !== count2[char]) return false;
+//   }
+//   return true;
+// }
 
-console.log(checkContent("daegu", "soul")); 
-console.log(checkContent("assalomualykum", "vo alykum assalom"));       
-console.log(checkContent("123344", "123344"));          
+// console.log(checkContent("daegu", "soul")); 
+// console.log(checkContent("assalomualykum", "vo alykum assalom"));       
+// console.log(checkContent("123344", "123344"));          
 
 
 
